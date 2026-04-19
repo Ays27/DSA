@@ -6,9 +6,9 @@ function maxDistance(nums1: number[], nums2: number[]): number {
     while (i < nums1.length && j < nums2.length) {
         if (nums1[i] <= nums2[j]) {
             maxDist = Math.max(maxDist, j - i);
-            j++; // try to extend distance
+            j++; 
         } else {
-            i++; // need smaller nums1[i]
+            i++; 
         }
     }
 

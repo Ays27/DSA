@@ -3,7 +3,7 @@ function maxValue(nums: number[]): number[] {
 
     const ans: number[] = Array(n);
 
-    // preMax[i] = maximum in nums[0..i]
+    
     const preMax: number[] = Array(n);
     preMax[0] = nums[0];
 
@@ -13,11 +13,10 @@ function maxValue(nums: number[]): number[] {
 
     let sufMin = Infinity;
 
-    // traverse from right to left
+    
     for (let i = n - 1; i >= 0; i--) {
 
-        // if there exists a smaller value on the right,
-        // then i can connect to the same component as i+1
+        
         if (preMax[i] > sufMin && i < n - 1) {
             ans[i] = ans[i + 1];
         } else {

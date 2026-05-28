@@ -7,7 +7,7 @@ function stringIndices(wordsContainer: string[], wordsQuery: string[]): number[]
 
     const root = new TrieNode();
 
-    // Update best index for a node
+    
     function update(node: TrieNode, i: number) {
         if (
             node.idx === -1 ||
@@ -21,7 +21,6 @@ function stringIndices(wordsContainer: string[], wordsQuery: string[]): number[]
         }
     }
 
-    // Build reversed trie
     for (let i = 0; i < wordsContainer.length; i++) {
         let node = root;
         update(node, i);
@@ -42,7 +41,6 @@ function stringIndices(wordsContainer: string[], wordsQuery: string[]): number[]
 
     const ans: number[] = [];
 
-    // Query
     for (const word of wordsQuery) {
         let node = root;
 
